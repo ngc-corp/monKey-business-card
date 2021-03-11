@@ -1,0 +1,159 @@
+
+.card {
+
+  width: 100%;
+  max-width: rem(1024);
+  padding-top: 56.25%;
+  position: relative;
+  box-shadow: var(--basePadding) var(--basePadding) var(--baseShadow) rgb(0 0 0 / 25%);
+  border-radius: var(--basePadding);
+  background-color: $c-green;
+  background-image: url('../assets/background.svg');
+  background-size: cover;
+  background-position: 100%;
+
+  @media screen and (min-width: 1280px) {
+
+    width: rem(1024);
+    padding-top: calc((#{rem(1024)} / 100) * 56.25);
+  }
+
+  &__content {
+
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__headline,
+  &__banano-logo {
+
+    position: absolute;
+    font-size: var(--headlineFontSize);
+  }
+
+  &__headline {
+
+    top: var(--basePadding);
+    left: var(--basePadding);
+  }
+
+  &__banano-logo {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: var(--basePadding);
+    right: var(--basePadding);
+    text-decoration: none;
+
+    svg {
+
+      display: flex;
+      flex-shrink: 0;
+      width: auto;
+      height: var(--logoSize);
+      margin-right: var(--logoMargin);
+    }
+  }
+
+  &__top {
+
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+  }
+
+  &__bottom {
+
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+  }
+
+  &__mon-key {
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__qr-code {
+
+    height: 50%;
+    margin-top: auto;
+    margin-left: auto;
+    border: calc(var(--basePadding) / 2) solid $c-white;
+    border-bottom-right-radius: var(--basePadding);
+  }
+
+  &__headline,
+  &__banano-logo,
+  &__banano-account,
+  &__banano-account-link,
+  &__banano-explorer-link {
+
+    color: $c-yellow;
+  }
+
+  &__card__banano-logo,
+  &__banano-account-link,
+  &__banano-explorer-link {
+
+    &:hover {
+
+      color: $c-yellow-hover;
+      text-decoration: underline;
+    }
+  }
+
+  &__banano-account {
+
+    position: absolute;
+    bottom: var(--basePadding);
+    left: var(--basePadding);
+    display: block;
+    width: 70%;
+  }
+
+  &__banano-account-link,
+  &__banano-explorer-link {
+
+    font-size: var(--fontSize);
+    word-break: break-all;
+    text-decoration: none;
+  }
+
+  &__info {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border-radius: var(--basePadding);
+    background: $c-yellow;
+
+    &--active {
+
+      display: flex;
+      visibility: visible;
+    }
+  }
+
+  &__info-message {
+
+    font-size: x-large;
+    color: $c-black;
+  }
+}

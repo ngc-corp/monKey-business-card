@@ -1,0 +1,41 @@
+<% layout("layout") %>
+
+<section>
+  <div class="card" data-ban="<%~ it.bananoAddress %>">
+    <div class="card__info"><span class="card__info-message">BANANO address copied to clipboard!</span></div>
+    <div class="card__content">
+      <div class="card__top">
+        <h1 class="card__headline">MONKEY BUSINESS CARD <span id="sr-banano-address" class="sr-only"><%~ it.bananoAddress %></span></h1>
+        <img class="card__mon-key" src="<%~ it.monKeySrc %>" alt="MonKey image for this BANANO address" />
+        <div class="card__banano-account">
+          <a
+            class="card__banano-account-link"
+            href="#"
+            data-clipboard-text="<%~ it.bananoAddress %>"
+          >
+            <span class="card__banano-account-value">BANANO Address</span>
+          </a>
+          <span> | </span>
+          <a
+            class="card__banano-explorer-link"
+            href="<%~ it.explorerLinkHref %>"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="card__banano-account-value">Network Explorer</span>
+          </a>
+        </div>
+      </div>
+      <div class="card__bottom">
+        <a href="https://banano.cc" target="_blank" class="card__banano-logo" rel="noreferrer">
+          <svg width="100" height="53" viewBox="0 0 100 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M71.9266 52.3765C40.4393 56.384 25.8979 28.5607 28.4169 25.8127C30.1344 23.9808 32.7679 23.8663 35.0579 23.8663C45.5918 23.6373 60.4767 35.8887 63.5681 35.8887C69.4076 35.7742 78.224 26.3852 84.0635 18.7138C86.468 15.5078 101.582 10.5844 99.8643 19.0573C94.4829 46.4226 75.934 51.804 71.9266 52.3765Z" fill="#FBDD11"/>
+            <path d="M28.0734 0.393952C59.5607 -3.61352 74.1021 24.2098 71.5831 26.9577C69.8656 28.7897 67.2321 28.9042 64.9421 28.9042C54.4082 29.1332 39.5233 16.8818 36.4319 16.8818C30.5924 16.9963 21.776 26.3852 15.9365 34.0567C13.532 37.2627 -1.58183 42.1861 0.135653 33.7132C5.51711 6.2334 24.066 0.851948 28.0734 0.393952Z" fill="#FBDD11"/>
+          </svg>
+          <span>BANANO</span>
+        </a>
+        <img src="<%~ it.qrCodeBase64 %>" class="card__qr-code"  alt="QR code for this BANANO address" />
+      </div>
+    </div>
+  </div>
+</section>

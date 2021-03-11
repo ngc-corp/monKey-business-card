@@ -1,0 +1,21 @@
+:root {
+  --basePadding: #{rem(12)};
+  --baseShadow: #{rem(10)};
+  --sectionPadding: #{rem(16)};
+  --headlineFontSize: #{rem(12)};
+  --fontSize: #{rem(12)};
+  --logoSize: #{rem(12)};
+  --logoMargin: #{rem(4)};
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --basePadding: #{rem(16)};
+    --baseShadow: #{rem(20)};
+    --sectionPadding: 10%;
+    --headlineFontSize: #{rem(16)};
+    --fontSize: #{rem(16)};
+    --logoSize: #{rem(20)};
+    --logoMargin: #{rem(6)};
+  }
+}

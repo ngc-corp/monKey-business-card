@@ -1,0 +1,14 @@
+
+@function rem($pxs...) {
+  $rem-value: '';
+
+  @each $px in $pxs {
+    @if $px == 0 {
+      $rem-value: #{$rem-value + ' ' + $px};
+    } @else {
+      $rem-value: #{$rem-value + ' ' + $px / $base-font-size}rem;
+    }
+  }
+
+  @return $rem-value;
+}

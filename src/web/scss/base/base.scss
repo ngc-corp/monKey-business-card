@@ -1,0 +1,33 @@
+
+html {
+
+  height: 100%;
+  font-size: 100%;
+  font-family: $default-font-family;
+  scroll-behavior: smooth;
+
+  *,
+  *::before,
+  *::after {
+
+    box-sizing: border-box;
+  }
+}
+
+body {
+
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $c-body-background;
+  color: $c-font-std;
+}
+
+main {
+
+  display: block;
+  width: 100%;
+  min-width: rem(500);
+  height: 100%;
+}

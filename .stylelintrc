@@ -1,0 +1,10 @@
+{
+  "extends": "./node_modules/@ngc-corp/stylelint-scss-rules/index.js",
+  "rules": {},
+  "ignoreFiles": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+  ]
+}

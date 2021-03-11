@@ -1,0 +1,9 @@
+<% layout("layout") %>
+
+<section>
+  <form id="form" class="form" action="/">
+    <label for="ban-address">Enter BANANO address</label>
+    <input id="ban-address" name="ban-address" placeholder="ban_" />
+    <input type="submit" value="Show MonKey Business Card" />
+  </form>
+</section>
