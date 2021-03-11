@@ -2,6 +2,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WebpackShellPluginNext = require('webpack-shell-plugin-next');
 
 module.exports = {
   entry: ['./src/web/js/main.ts'],
@@ -56,5 +57,12 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
+    new WebpackShellPluginNext({
+      onDoneWatch:{
+        scripts: ['npm run copy-dist'],
+        blocking: false,
+        parallel: true,
+      }
+    })
   ]
 };

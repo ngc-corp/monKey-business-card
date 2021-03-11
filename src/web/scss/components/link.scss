@@ -1,0 +1,11 @@
+
+.link {
+
+  color: $c-yellow;
+
+  &:hover {
+
+    color: $c-yellow-hover;
+    text-decoration: underline;
+  }
+}

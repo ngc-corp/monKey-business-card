@@ -34,6 +34,21 @@ function initForm(elementForm: HTMLFormElement) {
   });
 }
 
+function initMenu(elementMenu: HTMLElement) {
+
+  const elementMenuTriggers = document.querySelectorAll('.menu-trigger');
+
+  elementMenu.removeAttribute('style');
+
+  elementMenuTriggers.forEach(elementTrigger => {
+
+    elementTrigger.addEventListener('click', () => {
+
+      elementMenu.classList.toggle('menu--hidden');
+    });
+  });
+}
+
 function init() {
 
   console.info('Welcome to Banano Card.');
@@ -45,16 +60,11 @@ function init() {
 
   const elementForm = document.querySelector('.form') as HTMLFormElement;
   const elementCard = document.querySelector('.card');
+  const elementMenu = document.querySelector('.menu') as HTMLDivElement;
 
-  if (elementForm) {
-
-    initForm(elementForm);
-  }
-
-  if (elementCard) {
-
-    initCard();
-  }
+  elementForm && initForm(elementForm);
+  elementCard && initCard();
+  elementMenu && initMenu(elementMenu);
 }
 
 window.addEventListener('DOMContentLoaded', init);

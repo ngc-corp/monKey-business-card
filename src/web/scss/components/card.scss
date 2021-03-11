@@ -94,22 +94,9 @@
 
   &__headline,
   &__banano-logo,
-  &__banano-account,
-  &__banano-account-link,
-  &__banano-explorer-link {
+  &__banano-account {
 
     color: $c-yellow;
-  }
-
-  &__card__banano-logo,
-  &__banano-account-link,
-  &__banano-explorer-link {
-
-    &:hover {
-
-      color: $c-yellow-hover;
-      text-decoration: underline;
-    }
   }
 
   &__banano-account {

@@ -1,0 +1,53 @@
+.menu {
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: var(--basePadding);
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+  background-color: $c-white;
+  z-index: 2;
+  transition: opacity .3s ease, visibility .3s ease-in-out;
+
+  &--hidden {
+
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__list {
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+
+    padding: var(--basePadding);
+    color: $c-black;
+    font-size: x-large;
+    word-break: break-all;
+    text-align: center;
+  }
+}
+
+.menu-trigger {
+
+  display: block;
+  width: var(--menuSize);
+  height: var(--menuSize);
+  margin-left: auto;
+
+  svg {
+
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,6 +1,6 @@
 <% layout("layout") %>
 
-<section>
+<section class="section--card">
   <div class="card" data-ban="<%~ it.bananoAddress %>">
     <div class="card__info"><span class="card__info-message">BANANO address copied to clipboard!</span></div>
     <div class="card__content">
@@ -9,7 +9,7 @@
         <img class="card__mon-key" src="<%~ it.monKeySrc %>" alt="MonKey image for this BANANO address" />
         <div class="card__banano-account">
           <a
-            class="card__banano-account-link"
+            class="link card__banano-account-link"
             href="#"
             data-clipboard-text="<%~ it.bananoAddress %>"
           >
@@ -17,7 +17,7 @@
           </a>
           <span> | </span>
           <a
-            class="card__banano-explorer-link"
+            class="link card__banano-explorer-link"
             href="<%~ it.explorerLinkHref %>"
             target="_blank"
             rel="noreferrer"

@@ -7,3 +7,11 @@ section {
   height: 100%;
   padding: var(--sectionPadding);
 }
+
+.section {
+
+  &--card {
+
+    min-width: rem(500);
+  }
+}

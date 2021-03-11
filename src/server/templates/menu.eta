@@ -1,0 +1,17 @@
+
+<div class="header">
+  <a class="menu-trigger" href="#"><span class="sr-only">open menu</span><svg xmlns="http://www.w3.org/2000/svg" width="120" height="100" viewBox="0 0 31.75 26.458"><g fill="#fbdd11" fill-rule="evenodd"><path d="M0 0h31.75v5.292H0zM0 10.583h31.75v5.292H0zM0 21.167h31.75v5.292H0z"/></g></svg></a>
+</div>
+
+<nav class="menu menu--hidden" style="visibility: hidden">
+  <a class="menu-trigger" href="#"><span class="sr-only">close menu</span><svg xmlns="http://www.w3.org/2000/svg" width="120" height="100" viewBox="0 0 31.75 26.458"><g fill="#fbdd11" fill-rule="evenodd"><path d="M28.972 3.875L6.52 26.325l-3.742-3.741L25.229.133z"/><path d="M25.23 26.326L2.779 3.875 6.52.133l22.45 22.45z"/></g></svg></a>
+  <div class="menu__content">
+    <ul class="menu__list">
+      <li class="menu__item">Contact: <a class="link" href="mailto:banano@ngc-corp.com" rel="noreferrer">banano@ngc-corp.com</a></li>
+      <li class="menu__item">This software is open source. <a class="link" href="https://github.com/ngc-corp/monKey-business-card" target="_blank" rel="noreferrer">Visit GitHub</a></li>
+      <li class="menu__item">🍌🍌🍌 Donations are welcome 🍌🍌🍌</li>
+      <li class="menu__item">ban_3jcr7qrykbtyu8x6fik1tq7o77pstnwo7hmsqoswjzzwky5hjo4ofgza657y</li>
+      <li class="menu__item">nano_3paye3hdp1ik7baic3916c9sk9foyq4fa46abcgc1fem599qno3rjn1cb4fs</li>
+    </ul>
+  </div>
+</nav>

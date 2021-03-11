@@ -19,6 +19,8 @@
   <script defer src="/dist/main.js"></script>
 </head>
 <body>
+  <%~ includeFile("./menu") %>
   <main><%~ it.body %></main>
+  <script type="text/javascript"> </script>
 </body>
 </html>

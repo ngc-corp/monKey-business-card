@@ -6,6 +6,7 @@
   --fontSize: #{rem(12)};
   --logoSize: #{rem(12)};
   --logoMargin: #{rem(4)};
+  --menuSize: #{rem(32)};
 }
 
 @media screen and (min-width: 768px) {
@@ -17,5 +18,6 @@
     --fontSize: #{rem(16)};
     --logoSize: #{rem(20)};
     --logoMargin: #{rem(6)};
+    --menuSize: #{rem(48)};
   }
 }
