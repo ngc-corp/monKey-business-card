@@ -49,10 +49,10 @@ router
     } else {
 
       const rendered = await renderFile('index.eta', {
+        metaDescription: 'Share your personal BANANO monKey business card',
+        metaTitle: 'Share your personal BANANO monKey business card',
         errors: {
           invalidBananoAddress: true,
-          metaDescription: 'Share your personal BANANO monKey business card',
-          metaTitle: 'Share your personal BANANO monKey business card',
         }
       }, {cache: false});
 
