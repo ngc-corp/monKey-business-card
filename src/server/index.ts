@@ -38,12 +38,14 @@ router
         size: 256 * 2,
       });
       const monKeySrc = `https://monkey.banano.cc/api/v1/monkey/${bananoAddress}`;
+      const metaImage = `https://monkey.banano.cc/api/v1/monkey/${bananoAddress}?format=png&size=512`;
       const explorerLinkHref = `https://creeper.banano.cc/explorer/account/${bananoAddress}`;
       const rendered = await renderFile('card.eta', {
         bananoAddress,
         explorerLinkHref,
         metaDescription: `My personal BANANO monKey business card: ${bananoAddress}`,
         metaTitle: 'My personal BANANO monKey business card',
+        metaImage,
         monKeySrc,
         qrCodeBase64,
       }, {cache: false});
