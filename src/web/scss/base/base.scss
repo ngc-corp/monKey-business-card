@@ -2,6 +2,7 @@
 html {
 
   height: 100%;
+  min-height: calc(#{rem(64)} + 100vw * .5625);
   font-size: 100%;
   font-family: $default-font-family;
   scroll-behavior: smooth;
@@ -19,6 +20,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  min-height: 100%;
   width: 100%;
   background-color: $c-body-background;
   color: $c-font-std;
