@@ -18,7 +18,11 @@ router
 
     await next();
 
-    const rendered = await renderFile('index.eta', {}, {cache: false});
+    const rendered = await renderFile('index.eta', {
+      metaDescription: 'Share your personal BANANO monKey business card',
+      metaTitle: 'Share your personal BANANO monKey business card',
+      errors: {},
+    }, {cache: false});
 
     context.response.body = rendered as string;
   })
@@ -53,7 +57,7 @@ router
         metaTitle: 'Share your personal BANANO monKey business card',
         errors: {
           invalidBananoAddress: true,
-        }
+        },
       }, {cache: false});
 
       context.response.body = rendered as string;
