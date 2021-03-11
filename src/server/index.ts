@@ -19,8 +19,8 @@ router
     await next();
 
     const rendered = await renderFile('index.eta', {
-      metaDescription: 'Share your personal BANANO monKey business card',
-      metaTitle: 'Share your personal BANANO monKey business card',
+      metaDescription: 'BANANO MonKey business card',
+      metaTitle: 'Share your personal BANANO MonKey business card',
       errors: {},
     }, {cache: false});
 
@@ -38,13 +38,13 @@ router
         size: 256 * 2,
       });
       const monKeySrc = `https://monkey.banano.cc/api/v1/monkey/${bananoAddress}`;
-      const metaImage = `https://monkey.banano.cc/api/v1/monkey/${bananoAddress}?format=png&size=512`;
+      const metaImage = `https://monkey.banano.cc/api/v1/monkey/${bananoAddress}?format=png&size=512&background=true`;
       const explorerLinkHref = `https://creeper.banano.cc/explorer/account/${bananoAddress}`;
       const rendered = await renderFile('card.eta', {
         bananoAddress,
         explorerLinkHref,
-        metaDescription: `My personal BANANO monKey business card: ${bananoAddress}`,
-        metaTitle: 'My personal BANANO monKey business card',
+        metaDescription: `My personal BANANO MonKey business card - ${bananoAddress}`,
+        metaTitle: 'BANANO MonKey business card',
         metaImage,
         monKeySrc,
         qrCodeBase64,
@@ -55,8 +55,8 @@ router
     } else {
 
       const rendered = await renderFile('index.eta', {
-        metaDescription: 'Share your personal BANANO monKey business card',
-        metaTitle: 'Share your personal BANANO monKey business card',
+        metaDescription: 'BANANO MonKey business card',
+        metaTitle: 'Share your personal BANANO MonKey business card',
         errors: {
           invalidBananoAddress: true,
         },
