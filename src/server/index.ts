@@ -43,7 +43,7 @@ router
       const rendered = await renderFile('card.eta', {
         bananoAddress,
         explorerLinkHref,
-        metaDescription: `My personal BANANO MonKey business card - ${bananoAddress}`,
+        metaDescription: bananoAddress,
         metaTitle: 'BANANO MonKey business card',
         metaImage,
         monKeySrc,
