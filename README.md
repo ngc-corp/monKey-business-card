@@ -4,7 +4,7 @@ Latest version online can be found here:
 
 https://business-card.banano.one
 
-Or as a direct link to your personal monKey business card
+Or as a direct link to your personal MonKey business card
 
 https://business-card.banano.one/ban_3jcr7qrykbtyu8x6fik1tq7o77pstnwo7hmsqoswjzzwky5hjo4ofgza657y
 

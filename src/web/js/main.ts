@@ -51,10 +51,10 @@ function initMenu(elementMenu: HTMLElement) {
 
 function init() {
 
-  console.info('Welcome to Banano Card.');
-  console.info('Source code available at https://github.com/ngc-corp/banano-card');
+  console.info('Welcome to MonKey Business Card.');
+  console.info('Source code is available at https://github.com/ngc-corp/monKey-business-card');
 
-  console.info('If you like BANANO MonKey business card, consider donating:');
+  console.info('If you like MonKey Business Card, consider donating:');
   console.info('Banano - ban_3jcr7qrykbtyu8x6fik1tq7o77pstnwo7hmsqoswjzzwky5hjo4ofgza657y');
   console.info('Nano - nano_3paye3hdp1ik7baic3916c9sk9foyq4fa46abcgc1fem599qno3rjn1cb4fs');
 

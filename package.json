@@ -1,7 +1,7 @@
 {
   "name": "@ngc-corp/monkey-business-card",
   "version": "1.0.0",
-  "description": "BANANO - monKey business card",
+  "description": "BANANO - MonKey business card",
   "scripts": {
     "deploy": "ansible-playbook -i ansible/hosts.dist ansible/deploy_production.yml --extra-vars=\"env=production\"",
     "deno-dev": "deno run -L debug --unstable --watch --allow-read --allow-net src/server/index.ts",
