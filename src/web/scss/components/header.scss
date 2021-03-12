@@ -1,7 +1,4 @@
 .header {
 
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: var(--basePadding);
+  padding: calc(var(--basePadding) * 2) calc(var(--basePadding) * 2);
 }

@@ -4,15 +4,6 @@ section {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
-  padding: var(--sectionPadding);
-}
-
-.section {
-
-  &--card {
-
-    min-width: rem(500);
-    padding-top: rem(64);
-  }
+  height: -webkit-fill-available;
+  padding: 0 var(--sectionPadding);
 }

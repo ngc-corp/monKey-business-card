@@ -1,23 +1,35 @@
 :root {
-  --basePadding: #{rem(12)};
-  --baseShadow: #{rem(10)};
-  --sectionPadding: #{rem(16)};
+  --basePadding: #{rem(8)};
+  --baseShadow: #{rem(8)};
+  --fontSizeCard: #{rem(12)};
+  --fontSizeMenu: large;
   --headlineFontSize: #{rem(12)};
-  --fontSize: #{rem(12)};
-  --logoSize: #{rem(12)};
   --logoMargin: #{rem(4)};
+  --logoSize: #{rem(12)};
   --menuSize: #{rem(32)};
+  --monkeyWidth: 80%;
+  --sectionPadding: #{rem(8)};
+}
+
+@media screen and (min-width: 376px) {
+  :root {
+    --basePadding: #{rem(16)};
+    --monkeyWidth: 100%;
+    --sectionPadding: #{rem(16)};
+  }
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --basePadding: #{rem(16)};
-    --baseShadow: #{rem(20)};
-    --sectionPadding: 10%;
+    --baseShadow: #{rem(16)};
+    --fontSizeCard: #{rem(16)};
+    --fontSizeMenu: x-large;
     --headlineFontSize: #{rem(16)};
-    --fontSize: #{rem(16)};
-    --logoSize: #{rem(20)};
     --logoMargin: #{rem(6)};
+    --logoSize: #{rem(20)};
     --menuSize: #{rem(48)};
+    --monkeyWidth: 100%;
+    --sectionPadding: #{rem(16)};
   }
 }

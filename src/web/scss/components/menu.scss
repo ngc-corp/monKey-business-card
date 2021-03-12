@@ -5,7 +5,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  padding: var(--basePadding);
+  padding: calc(var(--basePadding) * 2);
   pointer-events: auto;
   visibility: visible;
   opacity: 1;
@@ -41,7 +41,7 @@
 
     padding: var(--basePadding);
     color: $c-black;
-    font-size: x-large;
+    font-size: var(--fontSizeMenu);
     word-break: break-all;
     text-align: center;
   }

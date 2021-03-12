@@ -1,8 +1,16 @@
 
+.card-wrapper {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: calc(var(--basePadding) * 2);
+}
+
 .card {
 
   width: 100%;
-  max-width: rem(1024);
   padding-top: 56.25%;
   position: relative;
   box-shadow: var(--basePadding) var(--basePadding) var(--baseShadow) rgb(0 0 0 / 25%);
@@ -79,8 +87,9 @@
   &__mon-key {
 
     display: flex;
-    width: 100%;
+    width: var(--monkeyWidth);
     height: 100%;
+    margin: auto;
   }
 
   &__qr-code {
@@ -111,7 +120,7 @@
   &__banano-account-link,
   &__banano-explorer-link {
 
-    font-size: var(--fontSize);
+    font-size: var(--fontSizeCard);
     word-break: break-all;
     text-decoration: none;
   }
@@ -130,6 +139,7 @@
     z-index: 1;
     border-radius: var(--basePadding);
     background: $c-yellow;
+    text-align: center;
 
     &--active {
 
