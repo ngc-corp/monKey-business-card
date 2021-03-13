@@ -4,21 +4,44 @@ import ClipboardJS from 'clipboard';
 
 function initCard() {
 
-  const accountLink = document.querySelector('.card__banano-account-link') as HTMLElement;
-  const clipboard = new ClipboardJS(accountLink);
+  const accountLink = document.querySelector('.card__banano-account-link') as HTMLAnchorElement;
+  const shareLink = document.querySelector('.card__banano-share-link') as HTMLAnchorElement;
+  const clipboardCopyAddress = new ClipboardJS(accountLink);
+  const banAddress = document.querySelector('[data-ban]') as HTMLElement;
+
+  if (navigator.share) {
+
+    shareLink.addEventListener('click', () => {
+      void navigator.share({
+        url: window.location.href,
+        text: banAddress.getAttribute('data-ban') as string,
+        title: document.title,
+      });
+    });
+  } else {
+
+    const clipboardShare = new ClipboardJS(shareLink);
+
+    // @ts-ignore
+    clipboardShare.on('success', onClipboardSuccess.bind(null, 'URL copied to clipboard!'));
+  }
 
   // @ts-ignore
-  clipboard.on('success', () => {
+  clipboardCopyAddress.on('success', onClipboardSuccess.bind(null, 'BANANO address copied to clipboard!'));
+}
 
-    const infoOverlay = document.querySelector('.card__info');
+function onClipboardSuccess(message: string) {
 
-    infoOverlay?.classList.add('card__info--active');
+  const infoOverlay = document.querySelector('.card__info') as HTMLElement;
+  const infoMessage = infoOverlay.querySelector('.card__info-message') as HTMLElement;
 
-    window.setTimeout(() => {
+  infoMessage.textContent = message;
+  infoOverlay.classList.add('card__info--active');
 
-      infoOverlay?.classList.remove('card__info--active');
-    }, 1000);
-  });
+  window.setTimeout(() => {
+
+    infoOverlay?.classList.remove('card__info--active');
+  }, 1000);
 }
 
 function initForm(elementForm: HTMLFormElement) {

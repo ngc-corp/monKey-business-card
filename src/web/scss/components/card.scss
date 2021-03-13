@@ -128,12 +128,13 @@
     position: absolute;
     bottom: var(--basePadding);
     left: var(--basePadding);
-    display: block;
-    width: 70%;
+    display: flex;
+    flex-direction: initial;
+    align-items: center;
   }
 
   &__banano-account-link,
-  &__banano-explorer-link {
+  &__banano-share-link {
 
     font-size: var(--fontSizeCard);
     word-break: break-all;

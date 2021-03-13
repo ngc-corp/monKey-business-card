@@ -39,10 +39,8 @@ router
       });
       const monKeySrc = `https://monkey.banano.cc/api/v1/monkey/${bananoAddress}`;
       const metaImage = `https://monkey.banano.cc/api/v1/monkey/${bananoAddress}?format=png&size=512&background=true`;
-      const explorerLinkHref = `https://creeper.banano.cc/explorer/account/${bananoAddress}`;
       const rendered = await renderFile('card.eta', {
         bananoAddress,
-        explorerLinkHref,
         metaDescription: bananoAddress,
         metaTitle: 'BANANO MonKey business card',
         metaImage,

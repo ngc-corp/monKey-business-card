@@ -3,7 +3,7 @@
 <section class="section--card">
   <div class="card-wrapper">
     <div class="card" data-ban="<%~ it.bananoAddress %>">
-      <div class="card__info"><span class="card__info-message">BANANO address copied to clipboard!</span></div>
+      <div class="card__info"><span class="card__info-message"></span></div>
       <div class="card__content">
         <div class="card__top">
           <h1 class="card__headline">MONKEY BUSINESS CARD <span id="sr-banano-address" class="sr-only"><%~ it.bananoAddress %></span></h1>
@@ -14,16 +14,15 @@
               href="#"
               data-clipboard-text="<%~ it.bananoAddress %>"
             >
-              <span class="card__banano-account-value">BANANO Address</span>
+              <span class="card__banano-account-value">Copy Address</span>
             </a>
-            <span> | </span>
+            <span>&nbsp;|&nbsp;</span>
             <a
-              class="link card__banano-explorer-link"
-              href="<%~ it.explorerLinkHref %>"
-              target="_blank"
-              rel="noreferrer"
+              class="link card__banano-share-link"
+              href="#"
+              data-clipboard-text="https://business-card.banano.one/<%~ it.bananoAddress %>"
             >
-              <span class="card__banano-account-value">Network Explorer</span>
+              <span class="card__banano-account-value">Share</span>
             </a>
           </div>
         </div>
