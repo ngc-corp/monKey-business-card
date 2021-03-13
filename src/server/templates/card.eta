@@ -35,7 +35,7 @@
             </svg>
             <span>BANANO</span>
           </a>
-          <img src="<%~ it.qrCodeBase64 %>" class="card__qr-code"  alt="QR code for this BANANO address" />
+          <div class="card__qr-code"><%~ it.qrCodeSVG %></div>
         </div>
       </div>
     </div>

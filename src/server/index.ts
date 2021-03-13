@@ -2,7 +2,7 @@
 import { Application, Router, send } from './deps.ts';
 import { renderFile, configure } from './deps.ts';
 import { mixins } from './deps.ts';
-import { qrcode } from './deps.ts';
+import { getQrCode } from './qrcode.ts';
 import { nanoAddressValidator } from './deps.ts';
 
 const router = new Router();
@@ -34,7 +34,7 @@ router
 
     if (typeof bananoAddress === 'string' && nanoAddressValidator(bananoAddress, 'ban')) {
 
-      const qrCodeBase64 = await qrcode(bananoAddress, {
+      const qrCodeSVG = await getQrCode(bananoAddress, `QR code for BANANO address ${bananoAddress}`, undefined, {
         size: 256 * 2,
       });
       const monKeySrc = `https://monkey.banano.cc/api/v1/monkey/${bananoAddress}`;
@@ -47,7 +47,7 @@ router
         metaTitle: 'BANANO MonKey business card',
         metaImage,
         monKeySrc,
-        qrCodeBase64,
+        qrCodeSVG,
       }, {cache: false});
 
       context.response.body = rendered as string;

@@ -97,8 +97,23 @@
     height: 50%;
     margin-top: auto;
     margin-left: auto;
-    border: calc(var(--basePadding) / 2) solid $c-white;
-    border-bottom-right-radius: var(--basePadding);
+
+    svg {
+
+      width: auto;
+      height: 100%;
+      border-bottom-right-radius: var(--basePadding);
+    }
+
+    rect {
+
+      fill: #45af45;
+    }
+
+    path {
+
+      fill: $c-black;
+    }
   }
 
   &__headline,
