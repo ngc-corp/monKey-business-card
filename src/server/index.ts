@@ -68,7 +68,7 @@ const app = new Application();
 
 app.use(async (context, next) => {
 
-  if (context.request.url.pathname.search(/(.css|.js|.png|.xml|.ico|.svg|.txt|.webmanifest)/g) !== -1) {
+  if (context.request.url.pathname.search(/(\.css|\.js|\.png|\.xml|\.ico|\.svg|\.txt|\.webmanifest)/g) !== -1) {
 
     await send(context, context.request.url.pathname, {
       root: `${Deno.cwd()}/src/server/`,
